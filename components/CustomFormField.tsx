@@ -4,7 +4,6 @@ import Image from "next/image";
 import ReactDatePicker from "react-datepicker";
 import { Control } from "react-hook-form";
 import PhoneInput from "react-phone-number-input";
-import "react-phone-number-input/style.css";
 
 import { Checkbox } from "./ui/checkbox";
 import {
@@ -81,7 +80,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
       return (
         <FormControl>
           <PhoneInput
-            defaultCountry="BD"
+            defaultCountry="US"
             placeholder={props.placeholder}
             international
             withCountryCallingCode

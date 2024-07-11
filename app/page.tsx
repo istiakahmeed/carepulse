@@ -1,8 +1,11 @@
-import { PatientForm } from "@/components/forms/PatientForm";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+import { PatientForm } from "@/components/forms/PatientForm";
+
+const Home = ({ searchParams }: SearchParamProps) => {
+  const isAdmin = searchParams?.admin === "true";
+
   return (
     <div className="flex h-screen max-h-screen">
       <section className="remove-scrollbar container my-auto">
@@ -37,4 +40,6 @@ export default function Home() {
       />
     </div>
   );
-}
+};
+
+export default Home;
